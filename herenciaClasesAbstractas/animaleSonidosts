@@ -1,0 +1,50 @@
+/*
+Crea una clase abstracta Animal con nombre y método abstracto hacerSonido(). 
+Crea Perro, Gato, Vaca que la extiendan, cada uno con su sonido. Agrega un 
+método comer() en la clase padre que todas hereden. Crea instancias y haz que 
+hagan sus sonidos. 
+*/
+
+abstract class Animal {
+    nombre: string;
+
+    constructor(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    abstract hacerSonido(): void;
+
+    comer(): void {
+        console.log(`${this.nombre} está comiendo.`);
+    }
+}
+
+class Perro extends Animal {
+    hacerSonido(): void {
+        console.log(`${this.nombre} dice: ¡Guau!`);
+    }
+}
+
+class Gato extends Animal {
+    hacerSonido(): void {
+        console.log(`${this.nombre} dice: ¡Miau!`);
+    }
+}
+
+class Vaca extends Animal {
+    hacerSonido(): void {
+        console.log(`${this.nombre} dice: ¡Muu!`);
+    }
+}
+
+let perro = new Perro("Rex");
+let gato = new Gato("Mimi");
+let vaca = new Vaca("Lola");
+
+perro.hacerSonido();
+perro.comer();
+gato.hacerSonido();
+gato.comer();
+vaca.hacerSonido();
+vaca.comer();
+

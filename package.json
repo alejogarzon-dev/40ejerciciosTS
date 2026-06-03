@@ -1,0 +1,9 @@
+{
+  "name": "ejercicios40",
+  "private": true,
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5",
+    "@types/node": "latest"
+  }
+}
